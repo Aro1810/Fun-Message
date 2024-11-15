@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            background: url('walpaper.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 5%;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+        button {
+            font-size: 1.5em;
+            margin: 10px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        #yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #yes:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+        #no {
+            background-color: #f44336;
+            color: white;
+            position: absolute;
+            cursor: pointer;
+        }
+        #no:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Do you love me?</h1>
+    <button id="yes" onclick="goToSecondPage()">Yes</button>
+    <button id="no">No</button>
+
+    <script>
+        const noButton = document.getElementById('no');
+
+        noButton.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+        function goToSecondPage() {
+            window.location.href = 'secondPage.html';
+        }
+    </script>
+</body>
+</html>

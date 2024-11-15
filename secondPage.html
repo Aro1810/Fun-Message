@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Love Me!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            background: #f7f3f0;
+            color: #333;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 5%;
+        }
+        .bear-container {
+            margin: 20px auto;
+        }
+        .bear-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        button {
+            font-size: 1.5em;
+            margin: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>I Love You Too!</h1>
+    <div class="bear-container">
+        <img src="secondPage.jpeg" alt="Cute Bears">
+    </div>
+    <p>Thank you for loving me! 🥰</p>
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
